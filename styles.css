@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+aside {
+  flex-grow: 1;
+  align-self: center;
+}
+
+h1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-grow: 2;
+  height: inherit;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+figure {
+  border: 5px solid limegreen;
+  height: 21%;
+  width: 30%;
+}
+
+.left-border {
+  border-left: none;
+}
+
+.border-top {
+  border-top: none;
+}
+
+.border-right {
+  border-right: none;
+}
+
+.border-bottom {
+  border-bottom: none;
+}
