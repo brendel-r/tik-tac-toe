@@ -1,11 +1,48 @@
 * {
   margin: 0;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 3vh;
+  font-family: futura;
+  font-size: 2vw;
 }
 
 body {
   display: flex;
+  background-image: url("assets/graveyard.jpeg");
+ background-size: 100%;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+aside {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+img {
+  width: 55%;
+  height: 30%;
+}
+
+.witch-image{
+height: 40%;
+width: 65%;
+}
+
+
+.token {
+  width: 35%;
+  height: 15%;
+}
+
+h2 {
+  margin: 5% 5% 0 5%;
 }
 
 h2, span {
@@ -13,73 +50,70 @@ h2, span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: darkblue;
+  color: #183157;
   font-size: 2vw;
+}
+
+h3 {
+  font-size: 1.5vw;
+  color: #183157;
 }
 
 .sub-head {
   font-size: 1.3vw;
 }
 
-.side1, .side2 {
-  display: flex;
+.wins {
   flex-direction: column;
-  justify-content: space-evenly;
 }
 
-main {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  background-image: url("assets/graveyard.jpeg");
-  background-size: 100%;
-  justify-content: space-evenly;
+.wins h3 {
+  font-family: futura;
+  font-size: 2vw;
 }
 
-img {
-  width: 10vw;
-  height: 20vh;
-}
-
-h1{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.play-board-area{
-  display: flex;
+section {
   width: 50%;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
 }
 
-.tile {
-  height: 15vh;
-  width: 15vw;
+div {
+  width: 100%;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .board {
-  display: grid;
-  grid-row: 33% 33% 33%;
-  grid-template-columns: repeat(3, auto);
-  width: 40vw;
-  margin: 10px auto;
+  height: 60%;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
-figure {
-  border: 5px solid lightskyblue;
-  height: 20vh;
-  width: 30vw;
+button {
+  border: 5px solid #183157;
+  background: transparent;
+  height: 30%;
+  width: 30%;
 }
 
-.player-1-side, .player-2-side {
-  width: 25%;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.left-border {
+  border-left: none;
+}
+
+.border-top {
+  border-top: none;
+}
+
+.border-right {
+  border-right: none;
+}
+
+.border-bottom {
+  border-bottom: none;
+}
+
+.pointer-events {
+  pointer-events: none;
 }
 
