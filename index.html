@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-      <meta charset="utf-8">
-      <link rel="stylesheet" href="./styles.css">
-      <title>Spooky Tik-Tac-Toe</title>
-    </head>
-    <body>
-      <main>
-        <div class="side1">
-          <section class="player-1-side">
-            <h2>Wendy</h2><span class="sub-head">the Witch</span>
-            <img class="witch-img" src="./assets/witch.png" alt="Witch Player"></img>
-            <div class="wins">
-              <h3>0</h3>
-              <h3>Wins</h3>
-            </div>
-          </section>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Spooky Tik-Tac-Toe</title>
+  </head>
+  <body>
+    <main>
+      <aside class="player-side-1">
+        <h2>Wendy</h2><span class="sub-head">the Witch</span>
+        <img class="witch-image" src="./assets/witch.png" alt="Witch Player"></img>
+        <div class="wins">
+          <h3 class="p1-wins">0</h3>
+          <h3>Wins</h3>
         </div>
-          <section class="play-board-area">
-            <h1 class="">It's Wendy the Witch's Turn!!</h1>
-            <div class="board">
-              <button class="tile" id="top-left">0</button>
-              <button class="tile" id="top-middle">1</button>
-              <button class="tile" id="top-rightt">2</button>
-              <button class="tile" id="middle-left">3</button>
-              <button class="tile" id="middle-middle">4</button>
-              <button class="tile" id="middle-right">5</button>
-              <button class="tile" id="bottom-left">6</button>
-              <button class="tile" id="bottom-middle">7</button>
-              <button class="tile" id="bottom-right">8</button>
-            </div>
-          </section>
-        <div class="side2">
-          <section class="player-2-side">
-            <h2>Zeke</h2><span class="sub-head">the Zombie</span>
-            <img class="zombie-img" src="./assets/zombie.png" alt="Zombie Player"></img>
-            <div class="wins">
-              <h3>0</h3>
-              <h3>Wins</h3>
-            </div>
-          </section>
+        <h3>Battle Token</h3>
+        <img class="token"src="./assets/witchToken.png" id="x">
+        </img>
+      </aside>
+      <section>
+        <div>
+          <h1>Let's Play!</h1>
         </div>
-      <script type="text/javascript" src="./main.js"></script>
-      <script type="text/javascript" src="./player.js"></script>
-      <script type="text/javascript" src="./game.js"></script>
-      </main>
-    </body>
+        <div class="board">
+          <button class="left-border border-top" id="b0"></button>
+          <button class="border-top" id="b1"></button>
+          <button class="border-top border-right"id="b2"></button>
+          <button class="left-border" id="b3"></button>
+          <button id="b4"></button>
+          <button class="border-right" id="b5"></button>
+          <button class="left-border border-bottom" id="b6"></button>
+          <button class="border-bottom" id="b7"></button>
+          <button class="border-right border-bottom" id="b8"></button>
+        </div>
+      </section>
+      <aside class="player-side-2">
+        <h2>Zeke</h2><span class="sub-head">the Zombie</span>
+        <img class="zombie-image" src="./assets/zombie.png" alt="Zombie Player"></img>
+        <div class="wins">
+          <h3 class="p2-wins">0</h3>
+          <h3>Wins</h3>
+        </div>
+        <h3>Battle Token</h3>
+        <img class="token"src="./assets/zombieToken.png" id="o">
+        </img>
+      </aside>
+    </main>
+    <script type="text/javascript" src="./src/player.js"></script>
+    <script type="text/javascript" src="./src/game.js"></script>
+    <script type="text/javascript" src="./src/main.js"></script>
+  </body>
 </html>
