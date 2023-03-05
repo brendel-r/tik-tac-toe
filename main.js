@@ -4,6 +4,7 @@ var game = new Game();
 //QuerySelectors
 var buttons = document.querySelectorAll('button');
 var message = document.querySelector('h1');
+
 //Event Listeners
 window.addEventListener('load', addButtonListeners);
 
@@ -11,22 +12,20 @@ window.addEventListener('load', addButtonListeners);
 function addButtonListeners() {
   for(var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function() {
-    makeAMove()});
+    makeAMove(event)});
   }
 };
 
-function makeAMove() {
+function makeAMove(event) {
   for(var i = 0; i < buttons.length; i++) {
     if(game.turn === game.player1 && buttons[i].id === event.target.id) {
-    buttons[i].innerHTML = '<img class="token" src="./witchToken.png" id="x"></img>';
+    buttons[i].innerHTML = '<img class="token" src="./assets/witchToken.png" id="x">';
   } else if(game.turn === game.player2 && buttons[i].id === event.target.id) {
-      buttons[i].innerHTML = '<img class="token" src="./zombieToken.png" id="o"></img>';
+      buttons[i].innerHTML = '<img class="token" src="./assets/zombieToken.png" id="o">';
     }
   }
   game.generateValue();
   game.checkForWinner();
-  game.player1.saveWinsToStorage();
-  game.player2.saveWinsToStorage();
   game.toggleTurn();
   changeMessage();
 };
