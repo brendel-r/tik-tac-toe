@@ -1,10 +1,30 @@
 * {
   margin: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 3vh;
+}
+
+body {
+  display: flex;
+}
+
+h2, span {
+  font-family: berry rotunda;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: darkblue;
+  font-size: 2vw;
+}
+
+.sub-head {
+  font-size: 1.3vw;
 }
 
 .side1, .side2 {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 }
 
 main {
@@ -14,6 +34,11 @@ main {
   background-image: url("assets/graveyard.jpeg");
   background-size: 100%;
   justify-content: space-evenly;
+}
+
+img {
+  width: 10vw;
+  height: 20vh;
 }
 
 h1{
@@ -28,14 +53,25 @@ h1{
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
-  border-left: 2px dotted black;
-  border-right: 2px dotted black;
+}
+
+.tile {
+  height: 15vh;
+  width: 15vw;
+}
+
+.board {
+  display: grid;
+  grid-row: 33% 33% 33%;
+  grid-template-columns: repeat(3, auto);
+  width: 40vw;
+  margin: 10px auto;
 }
 
 figure {
-  border: 5px solid darkslategrey;
-  height: 21%;
-  width: 30%;
+  border: 5px solid lightskyblue;
+  height: 20vh;
+  width: 30vw;
 }
 
 .player-1-side, .player-2-side {
