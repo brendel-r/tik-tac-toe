@@ -26,13 +26,13 @@ aside {
 }
 
 img {
-  width: 55%;
-  height: 30%;
+  width: 48%;
+  height: 37%;
 }
 
 .witch-image{
 height: 40%;
-width: 65%;
+width: 70%;
 }
 
 
@@ -41,6 +41,10 @@ width: 65%;
   height: 15%;
 }
 
+h1 {
+  color: #183157;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 h2 {
   margin: 5% 5% 0 5%;
 }
@@ -52,11 +56,13 @@ h2, span {
   align-items: center;
   color: #183157;
   font-size: 2vw;
+  font-family: fantasy;
 }
 
 h3 {
   font-size: 1.5vw;
   color: #183157;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .sub-head {
