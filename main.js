@@ -4,6 +4,9 @@ var game = new Game();
 //QuerySelectors
 var buttons = document.querySelectorAll('button');
 var displayMessage = document.querySelector('h1');
+var p1WinDisplay = document.querySelector('.p1-wins');
+var p2WinDisplay = document.querySelector('.p2-wins');
+
 
 //Event Listeners
 window.addEventListener('load', addButtonListeners);
@@ -41,9 +44,13 @@ function makeAMove(event) {
 function changeDisplayMessage() {
   if(game.player1.isWinner === true) {
     displayMessage.innerText = `${game.player1.id} is the scariest!!`
+    game.player1.wins++;
+    p1WinDisplay.innerText = `${game.player1.wins}`
     return
   } else if(game.player2.isWinner === true) {
     displayMessage.innerText = `${game.player2.id} is the scariest!!`
+    game.player2.wins++;
+    p2WinDisplay.innerText = `${game.player2.wins}`
     return
   } else if(game.turn === game.player1 && game.player1.isWinner === false) {
     displayMessage.innerText = `It's ${game.player1.id}'s Turn`
