@@ -20,13 +20,15 @@ function makeAMove(event) {
   for(var i = 0; i < buttons.length; i++) {
     if(game.turn === game.player1 && buttons[i].id === event.target.id) {
     buttons[i].innerHTML = '<img class="token" src="./assets/witchToken.png" id="x">';
-    // this.moves.push()
+    game.player1.moves.push(buttons[i].id)
     game.toggleTurn();
   } else if(game.turn === game.player2 && buttons[i].id === event.target.id) {
       buttons[i].innerHTML = '<img class="token" src="./assets/zombieToken.png" id="o">';
+      game.player2.moves.push(buttons[i].id)
       game.toggleTurn();
     }
   }
+  game.checkIfWinner()
   changeDisplayMessage();
 };
 

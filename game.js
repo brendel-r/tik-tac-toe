@@ -24,11 +24,11 @@ class Game {
     }
   }
   
-  // checkIfWinner() {
-  //   for (var i = 0; i<this.boardProspects.length; i++) {
-  //     if(this.boardProspects[i] === true) {
-
-  //     }
-  //   }
-  // }
+  checkIfWinner() {
+    for (var i = 0; i<this.boardProspects.length; i++) {
+      if((this.player1.moves.includes(this.boardProspects[i][0])) && (this.player1.moves.includes(this.boardProspects[i][1])) && (this.player1.moves.includes(this.boardProspects[i][2]))) {
+        this.player1.isWinner = true;
+      }
+    }
+  }
 };
