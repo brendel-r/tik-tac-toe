@@ -37,4 +37,31 @@ class Game {
       }
     }
   }
+
+  resetBoard(){
+    this.plays = 0;
+    this.player1.moves = [];
+    this.player2.moves = [];
+    this.player1.isWinner = false;
+    this.player2.isWinner = false;
+    this.boardProspects = [
+      ['b0', 'b1', 'b2'], 
+      ['b3', 'b4', 'b5'], 
+      ['b6', 'b7', 'b8'], 
+      ['b2', 'b4', 'b6'], 
+      ['b0', 'b4', 'b8'], 
+      ['b0', 'b3', 'b6'], 
+      ['b1', 'b4', 'b7'], 
+      ['b2', 'b5', 'b8']
+    ];
+    if(this.player1.isWinner === true){
+      this.turn = this.player2;
+    } else if (this.player2.isWinner === true){
+      this.turn = this.player1;
+    }
+  }
+
+  // restartGame(){
+
+  // }
 };

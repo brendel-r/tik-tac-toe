@@ -6,10 +6,13 @@ var buttons = document.querySelectorAll('button');
 var displayMessage = document.querySelector('h1');
 var p1WinDisplay = document.querySelector('.p1-wins');
 var p2WinDisplay = document.querySelector('.p2-wins');
+var restartBtn = document.querySelector('.restart')
 
 
 //Event Listeners
 window.addEventListener('load', addButtonListeners);
+// restartBtn.addEventListener("click", restartGame())
+
 
 //Event Handlers & Functions
 function addButtonListeners() {
@@ -21,7 +24,7 @@ function addButtonListeners() {
 
 function makeAMove(event) {
   if(game.player1.isWinner === true || game.player2.isWinner === true) {
-    return 
+    restartGame();
   } else {
     for(var i = 0; i < buttons.length; i++) {
       if(game.turn === game.player1 && buttons[i].id === event.target.id) {
@@ -37,8 +40,9 @@ function makeAMove(event) {
         }
     }
   }
-  game.checkIfWinner()
+  game.checkIfWinner();
   changeDisplayMessage();
+  console.log(game)
 };
 
 //Helper Functions
@@ -59,6 +63,11 @@ function changeDisplayMessage() {
   } else if(game.turn === game.player2 && game.player2.isWinner === false) {
     displayMessage.innerText = `It's ${game.player2.id}'s Turn`
   }
+}
 
-
-};
+  function restartGame(){
+    game.resetBoard()
+    for(var i = 0; i < buttons.length; i++){
+      buttons[i].innerHTML = ``
+    }
+  }
