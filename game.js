@@ -28,6 +28,11 @@ class Game {
     for (var i = 0; i<this.boardProspects.length; i++) {
       if((this.player1.moves.includes(this.boardProspects[i][0])) && (this.player1.moves.includes(this.boardProspects[i][1])) && (this.player1.moves.includes(this.boardProspects[i][2]))) {
         this.player1.isWinner = true;
+        return
+      }
+      if((this.player2.moves.includes(this.boardProspects[i][0])) && (this.player2.moves.includes(this.boardProspects[i][1])) && (this.player2.moves.includes(this.boardProspects[i][2]))) {
+        this.player2.isWinner = true;
+        return
       }
     }
   }
