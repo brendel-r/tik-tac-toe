@@ -3,6 +3,7 @@ class Game {
   this.player1 = new Player('Wendy the Witch');
   this.player2 = new Player('Zeke the Zombie');
   this.turn = this.player1;
+  this.plays = 0;
   this.boardProspects = [
     ['b0', 'b1', 'b2'], 
     ['b3', 'b4', 'b5'], 

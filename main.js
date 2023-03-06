@@ -27,10 +27,12 @@ function makeAMove(event) {
       if(game.turn === game.player1 && buttons[i].id === event.target.id) {
         buttons[i].innerHTML = '<img class="token" src="./assets/witchToken.png" id="x">';
         game.player1.moves.push(buttons[i].id)
+        game.plays++;
         game.toggleTurn();
       } else if(game.turn === game.player2 && buttons[i].id === event.target.id) {
           buttons[i].innerHTML = '<img class="token" src="./assets/zombieToken.png" id="o">';
           game.player2.moves.push(buttons[i].id)
+          game.plays++;
           game.toggleTurn();
         }
     }
@@ -43,12 +45,12 @@ function makeAMove(event) {
 
 function changeDisplayMessage() {
   if(game.player1.isWinner === true) {
-    displayMessage.innerText = `${game.player1.id} is the scariest!!`
+    displayMessage.innerText = `🧹 ${game.player1.id} is the scariest!! 🧹`
     game.player1.wins++;
     p1WinDisplay.innerText = `${game.player1.wins}`
     return
   } else if(game.player2.isWinner === true) {
-    displayMessage.innerText = `${game.player2.id} is the scariest!!`
+    displayMessage.innerText = `🧠 ${game.player2.id} is the scariest!! 🧠`
     game.player2.wins++;
     p2WinDisplay.innerText = `${game.player2.wins}`
     return
@@ -57,4 +59,6 @@ function changeDisplayMessage() {
   } else if(game.turn === game.player2 && game.player2.isWinner === false) {
     displayMessage.innerText = `It's ${game.player2.id}'s Turn`
   }
+
+
 };
