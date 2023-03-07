@@ -14,11 +14,9 @@ class Game {
     ['b1', 'b4', 'b7'], 
     ['b2', 'b5', 'b8']
   ];
-
   }
   
   toggleTurn() {
-    console.log('line3')
     if(this.player1 === this.turn) {
       this.turn = this.player2;
     } else {
@@ -27,7 +25,6 @@ class Game {
   }
   
   checkIfWinner() {
-    console.log('line4')
     for (var i = 0; i<this.boardProspects.length; i++) {
       if((this.player1.moves.includes(this.boardProspects[i][0])) && (this.player1.moves.includes(this.boardProspects[i][1])) && (this.player1.moves.includes(this.boardProspects[i][2]))) {
         this.player1.isWinner = true;
@@ -40,8 +37,7 @@ class Game {
     }
   }
 
-  resetBoard(){
-    console.log('line8')
+  resetBoard() {
     this.plays = 0;
     this.player1.moves = [];
     this.player2.moves = [];
