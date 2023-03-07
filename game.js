@@ -60,8 +60,4 @@ class Game {
       this.turn = this.player1;
     }
   }
-
-  // restartGame(){
-
-  // }
 };
