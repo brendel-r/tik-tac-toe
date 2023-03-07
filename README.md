@@ -1,7 +1,7 @@
 # Spooky Tik-Tac-Toe
 
 ## Introduction
-  This isn't your normal game of tik-tac-toe!! In this SPOOKY twist... Grab a friend as you each have to help Wendy the Witch or Zeke the Zombie battle it out to see who is the scariest.!! Click a space on the board to claim it and place your token. Get three in a row, column, or diagonally and you will officially be the scariest!
+  This isn't your normal game of tik-tac-toe!! In this SPOOKY twist... Grab a friend as you each have to help Wendy the Witch or Zeke the Zombie battle it out to see who is the scariest!! Click a space on the board to claim it and place your token. Get three in a row, column, or diagonally and you will     officially be the scariest!
 
 ## Preview
 ![preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDEwZjNmMWQ2MzMwYTEyM2U2MWFlNDRmNWQ1NDQ3ZTdhZThiNWVmNSZjdD1n/I8MnqL7cMLvBFb5voe/giphy.gif)
