@@ -48,7 +48,8 @@ function makeAMove(event) {
     setTimeout(function clearGame(){
       for(var i = 0; i < buttons.length; i++){
         buttons[i].innerHTML = ``;
-      }
+      };
+      switchPlayers();
     }, 2000)
     
   }
@@ -66,12 +67,19 @@ function changeDisplayMessage() {
     game.player2.wins++;
     p2WinDisplay.innerText = `${game.player2.wins}`
     return
-  } else if(game.player1.isWinner === false && game.player2.isWinner === false && this.game.plays === 9 ){
+  } else if(game.player1.isWinner === false && game.player2.isWinner === false && this.game.plays === 9 ) {
     displayMessage.innerText = `I'm not scared at all!! Try again!`
-  }else if(game.turn === game.player1 && game.player1.isWinner === false) {
+    return
+  }
+  switchPlayers();
+}
+
+function switchPlayers(){
+  if(game.turn === game.player1 && game.player1.isWinner === false) {
     displayMessage.innerText = `It's ${game.player1.id}'s Turn`
   } else if(game.turn === game.player2 && game.player2.isWinner === false) {
     displayMessage.innerText = `It's ${game.player2.id}'s Turn`
   }
 }
+
 
