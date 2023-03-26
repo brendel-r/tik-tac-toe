@@ -27,7 +27,7 @@
   - After a win, the game board will automaticly reset after a short pause and the player that did not win will start the next game.
   - After a player wins, the total wins display will update for that player.
 
-##Deployed Link
+## Deployed Link
   - [Spooky Tik Tac Toe](https://brendel-r.github.io/tik-tac-toe/)
 
 
